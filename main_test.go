@@ -13,17 +13,14 @@ func TestMain(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-
+	//tesyyyyy
 	rr := httptest.NewRecorder()
 	handler := http.HandlerFunc(homePage)
-
 	handler.ServeHTTP(rr, req)
-
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v",
 			status, http.StatusOK)
 	}
-
 	// Just verify the code not html content
 	expected := "text/html; charset=utf-8"
 	if contentType := rr.Header().Get("Content-Type"); contentType != expected {

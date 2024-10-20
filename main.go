@@ -15,6 +15,9 @@ func coursePage(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "static/courses.html")
 }
 
+// test 1
+// test 2
+// test 3
 func aboutPage(w http.ResponseWriter, r *http.Request) {
 	// Render the about html page
 	http.ServeFile(w, r, "static/about.html")
